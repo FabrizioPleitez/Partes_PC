@@ -26,7 +26,6 @@ function obtenerEntradas() {
 export default defineConfig({
     appType: "mpa",
 
-    // 🔥 Base para GitHub Pages
     base: "/Partes_PC/",
 
     build: {
@@ -36,7 +35,6 @@ export default defineConfig({
         rollupOptions: {
             input: obtenerEntradas(),
             output: {
-                // Asegurar rutas correctas de assets
                 assetFileNames: 'assets/[name]-[hash][extname]',
                 chunkFileNames: 'assets/[name]-[hash].js',
                 entryFileNames: 'assets/[name]-[hash].js'
@@ -44,7 +42,6 @@ export default defineConfig({
         },
     },
 
-    // Resolver aliases para imports
     resolve: {
         alias: {
             '@': resolve(__dirname, 'src'),
