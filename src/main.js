@@ -214,6 +214,7 @@ function setupBuilderForm() {
     if (armaTuPc) {
       armaTuPc.scrollIntoView({ behavior: "smooth" });
     }
+    
   });
 }
 

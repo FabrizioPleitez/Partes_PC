@@ -1,15 +1,11 @@
 <section id="catalogo" class="section">
   <div class="container">
 
-    {{!-- Título opcional de la sección (puedes cambiar el texto) --}}
     <h2 class="section-title">Opciones disponibles</h2>
 
-    {{!-- GRID DE TARJETAS DE PRODUCTOS --}}
     <div class="products-grid">
-      {{!-- Aquí recorre la lista de productos de la categoría seleccionada --}}
       {{#each productos}}
         <article class="product-card {{#if agotado}}agotado{{/if}}">
-          {{!-- Imagen del producto (todas mismas medidas gracias al CSS) --}}
           <img src="{{imagen}}" alt="{{nombre}}">
 
           <div class="product-card-body">
@@ -22,7 +18,6 @@
             <div class="product-card-price-row">
               <span class="product-card-price">L {{precio}}</span>
 
-              {{!-- Precio original tachado si existe --}}
               {{#if precioOriginal}}
                 <span class="product-card-price-old">
                   L {{precioOriginal}}
