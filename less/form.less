@@ -1,0 +1,101 @@
+/* ================================
+   SECCIÓN: ARMA TU PC (FORMULARIO)
+================================ */
+
+.buildpc-section {
+  background: @bg-section;
+  padding: 2.5rem 0 3rem;
+}
+
+.buildpc-inner {
+  .container();
+}
+
+.buildpc-layout {
+  .grid-2();
+  margin-top: 1.5rem;
+}
+
+.buildpc-info {
+  font-size: 0.95rem;
+  color: @text-muted;
+
+  ul {
+    margin-top: 0.75rem;
+    padding-left: 1.1rem;
+    li {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .buildpc-image {
+    margin-top: 1rem;
+    border-radius: @radius-md;
+    overflow: hidden;
+    box-shadow: @shadow-soft;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Formulario */
+.buildpc-form {
+  background: @bg-section-alt;
+  border-radius: @radius-lg;
+  padding: 1.5rem 1.75rem;
+  box-shadow: @shadow-soft;
+}
+
+.buildpc-form-row {
+  margin-bottom: 0.9rem;
+}
+
+.buildpc-form label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.buildpc-form input,
+.buildpc-form select,
+.buildpc-form textarea {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: @radius-sm;
+  border: 1px solid @border-color;
+  background: #070b16;
+  color: @text-color;
+  font-family: @font-main;
+  font-size: 0.88rem;
+}
+
+.buildpc-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botón enviar */
+.buildpc-submit {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.buildpc-submit-btn {
+  .btn(@color-primary);
+
+  /* este texto se muestra cuando el JS marca "enviado" */
+  &.is-sent {
+    background: #25d366;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .buildpc-form {
+    padding: 1.25rem 1.1rem;
+  }
+}

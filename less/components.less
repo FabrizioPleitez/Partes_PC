@@ -1,0 +1,65 @@
+/* ================================
+   SECCIÓN: COMPONENTES PRINCIPALES
+================================ */
+
+.components-section {
+  background: @bg-section;
+  padding: 2.5rem 0;
+}
+
+.components-inner {
+  .container();
+}
+
+.components-list {
+  margin-top: 1.5rem;
+  border-radius: @radius-lg;
+  background: @bg-section-alt;
+  box-shadow: @shadow-soft;
+  padding: 1.5rem 1.75rem;
+}
+
+.component-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid @border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.component-title {
+  font-weight: 600;
+}
+
+.component-description {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: @text-muted;
+  max-width: 520px;
+}
+
+.component-link {
+  .btn();
+  padding-inline: 1.2rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .components-list {
+    padding: 1.2rem 1rem;
+  }
+
+  .component-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

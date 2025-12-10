@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <div class="navbar-container container">
+    <div class="navbar-brand">
+      <img src="img/logo-pcmaster.png" alt="Logo PC Master Store" class="navbar-logo" />
+      <div class="navbar-brand-text">
+        <span class="logo">{{navbar.logo}}</span>
+        <span class="logo-subtitle">{{navbar.subtitle}}</span>
+      </div>
+    </div>
+
+    <ul class="navbar-menu">
+      {{#each navbar.links}}
+        <li class="navbar-item">
+          <a href="{{href}}" class="navbar-link">{{label}}</a>
+        </li>
+      {{/each}}
+    </ul>
+
+    <a href="{{navbar.cta.href}}" class="btn btn-primary navbar-cta">
+      {{navbar.cta.label}}
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+<section id="componentes" class="section"> 
+  <div class="container">
+    <h2 class="section-title">Componentes principales</h2>
+    <p class="section-subtitle">
+      Selecciona una categoría y haz clic en
+      <strong>"Ver opciones"</strong> para ver los productos disponibles.
+    </p>
+
+    <div class="componentes-grid">
+      {{#each components}}
+        <article class="componente-card">
+          <h3 class="componente-nombre">{{nombre}}</h3>
+          <p class="componente-descripcion">
+            {{descripcion}}
+          </p>
+          <button class="btn btn-primary" data-category="{{id}}">
+            Ver opciones
+          </button>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,103 @@
+<section id="arma-tu-pc" class="form-section">
+  <div class="form-container">
+    <div class="form-info">
+      <h2>Arma tu PC a medida</h2>
+      <p>
+        Cuéntanos qué uso le darás a tu PC y tu presupuesto aproximado. Nuestro
+        equipo te enviará una propuesta personalizada.
+      </p>
+      <ul class="form-benefits">
+        <li>Asesoría para gaming, oficina, edición o streaming.</li>
+        <li>Partes originales con garantía.</li>
+        <li>Envío de cotización por correo o WhatsApp.</li>
+      </ul>
+      <img
+        src="/img/arma_tu_pc_form.jpg"
+        alt="Persona armando una PC"
+        class="form-side-image"
+      />
+    </div>
+
+    <div class="form-card">
+      <h3>Solicitud de cotización</h3>
+      <form id="form-armar-pc">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Tu nombre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            required
+            placeholder="correo@ejemplo.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            required
+            placeholder="+504 ..."
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="uso">¿Para qué usarás la PC?</label>
+          <select id="uso" name="uso" required>
+            <option value="">Selecciona una opción</option>
+            <option value="gaming">Gaming</option>
+            <option value="oficina">Oficina / Estudio</option>
+            <option value="diseno">Diseño / Arquitectura</option>
+            <option value="edicion">Edición de foto/video</option>
+            <option value="streaming">Streaming</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="presupuesto">Presupuesto aproximado (Lempiras)</label>
+          <input
+            type="number"
+            id="presupuesto"
+            name="presupuesto"
+            min="0"
+            step="100"
+            placeholder="Ejemplo: 25000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Comentarios adicionales</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            placeholder="Ejemplo: Ya tengo monitor y teclado, solo necesito torre."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Enviar solicitud de cotización
+        </button>
+      </form>
+
+      <p
+        id="mensaje-cotizacion"
+        class="mensaje-ok"
+        style="display: none; margin-top: 1rem;"
+      ></p>
+    </div>
+  </div>
+</section>

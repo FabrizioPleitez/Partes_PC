@@ -1,0 +1,64 @@
+/* ================================
+   HERO PRINCIPAL
+================================ */
+
+.hero {
+  margin-top: 4.5rem; // deja espacio para el header fijo
+  background: radial-gradient(circle at top left, #171c3a 0, @bg-body 45%);
+  color: @text-color;
+}
+
+.hero-inner {
+  .container();
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 0 2.5rem;
+}
+
+.hero-copy h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-copy p {
+  color: @text-muted;
+  max-width: 540px;
+  font-size: 0.98rem;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-primary {
+  .btn(@color-primary);
+}
+
+.hero-secondary {
+  .btn(@bg-section-alt);
+  border: 1px solid @border-color;
+}
+
+.hero-image {
+  border-radius: @radius-lg;
+  overflow: hidden;
+  box-shadow: @shadow-soft;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}

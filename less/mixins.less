@@ -1,0 +1,44 @@
+/* ===========================
+   MIXINS GLOBALES
+   =========================== */
+
+/* Botones reutilizables: .btn(); */
+.btn(@bg: @color-primary; @color: #ffffff) {
+  display: inline-block;
+  padding: 0.45rem 1.4rem;
+  border-radius: @radius-md;
+  border: none;
+  background: @bg;
+  color: @color;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: lighten(@bg, 5%);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* Layout de 2 columnas: .grid-2(); */
+.grid-2(@gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: @gap;
+}

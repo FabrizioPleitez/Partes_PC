@@ -1,0 +1,139 @@
+/* ===========================
+   FOOTER MODERNO
+   =========================== */
+
+.site-footer {
+  margin-top: 3rem;
+  background: radial-gradient(circle at top, #0b1120, #020617);
+  color: #e5e7eb;
+  font-size: 0.95rem;          // letra más grande
+  line-height: 1.6;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* Layout de columnas */
+.footer-inner {
+  padding: 2.5rem 1.5rem 1.8rem;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1.5fr;
+  gap: 2.5rem;
+}
+
+/* Columna genérica */
+.footer-column {
+  min-width: 0;
+}
+
+/* Títulos de cada bloque */
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  color: #f9fafb;
+}
+
+/* Listas de texto */
+.footer-list,
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Items de lista normales */
+.footer-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* Etiquetas "Teléfono:", etc. */
+.footer-label {
+  font-weight: 600;
+  color: #cbd5f5;
+}
+
+/* Enlaces del footer */
+.footer-links li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  transition: width 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f9fafb;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Párrafos del footer */
+.footer-text {
+  margin: 0 0 0.6rem;
+  color: #cbd5f5;
+}
+
+.footer-small {
+  font-size: 0.9rem;
+  color: #9ca3c7;
+}
+
+/* Franja inferior */
+.footer-bottom {
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.footer-bottom-inner {
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom-inner p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3c7;
+}
+
+/* ===========================
+   RESPONSIVE FOOTER
+   =========================== */
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding-inline: 1.2rem;
+  }
+
+  .footer-bottom-inner {
+    padding-inline: 1.2rem;
+    text-align: center;
+  }
+}

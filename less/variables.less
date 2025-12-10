@@ -1,0 +1,97 @@
+/* ================================
+   VARIABLES GLOBALES Y MIXINS
+   Aquí definimos TODAS las variables
+   que usan los otros .less
+================================ */
+
+/* Colores base */
+@bg-body:         #050816;
+@bg-section:      #050816;
+@bg-section-alt:  #080c1a;
+
+@color-primary:   #00a8ff;
+@color-primary-soft: lighten(@color-primary, 8%);
+@color-accent:    #ff3b8d;
+
+@text-color:      #f5f7ff;
+@text-muted:      #9fa4c4;
+
+@border-color:    rgba(255, 255, 255, 0.08);
+@card-bg:         #0a0f1f;
+
+/* Sombras y bordes */
+@shadow-soft:     0 18px 45px rgba(0, 0, 0, 0.55);
+@radius-sm:       0.4rem;
+@radius-md:       0.8rem;
+@radius-lg:       1.2rem;
+
+/* Tipografía */
+@font-main:       "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+/* Espaciados */
+@space-xs:        0.25rem;
+@space-sm:        0.5rem;
+@space-md:        1rem;
+@space-lg:        2rem;
+
+/* Transiciones */
+@transition-fast: 0.2s ease-out;
+
+/* ====== ALIAS PARA LOS NOMBRES QUE DAN ERROR ====== */
+/* los errores que viste usaban estos nombres: */
+
+@color-bg:         @bg-body;
+@color-bg-section: @bg-section-alt;
+@color-border:     @border-color;
+@color-muted:      @text-muted;
+@muted-color:      @text-muted;
+
+/* Por si en algún lugar usan @text-color o @card-bg-section */
+@card-bg-section:  @card-bg;
+
+/* ================================
+   MIXINS REUTILIZABLES
+================================ */
+
+/* Botón genérico */
+.btn(@bg: @color-primary; @fg: @text-color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.6rem;
+  border-radius: @radius-md;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: @bg;
+  color: @fg;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background @transition-fast,
+    box-shadow @transition-fast,
+    transform @transition-fast;
+
+  &:hover {
+    background: lighten(@bg, 8%);
+    box-shadow: 0 0 0 1px fade(@bg, 45%);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+/* Grid de 2 columnas responsivo (lo usaste como .grid-2()) */
+.grid-2() {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}

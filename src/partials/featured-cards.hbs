@@ -1,0 +1,52 @@
+<section id="catalogo" class="section">
+  <div class="container">
+
+    {{!-- Título opcional de la sección (puedes cambiar el texto) --}}
+    <h2 class="section-title">Opciones disponibles</h2>
+
+    {{!-- GRID DE TARJETAS DE PRODUCTOS --}}
+    <div class="products-grid">
+      {{!-- Aquí recorre la lista de productos de la categoría seleccionada --}}
+      {{#each productos}}
+        <article class="product-card {{#if agotado}}agotado{{/if}}">
+          {{!-- Imagen del producto (todas mismas medidas gracias al CSS) --}}
+          <img src="{{imagen}}" alt="{{nombre}}">
+
+          <div class="product-card-body">
+            <h3 class="product-card-title">{{nombre}}</h3>
+
+            <p class="product-card-description">
+              {{descripcion}}
+            </p>
+
+            <div class="product-card-price-row">
+              <span class="product-card-price">L {{precio}}</span>
+
+              {{!-- Precio original tachado si existe --}}
+              {{#if precioOriginal}}
+                <span class="product-card-price-old">
+                  L {{precioOriginal}}
+                </span>
+              {{/if}}
+            </div>
+
+            {{!-- Estado: disponible / agotado (opcional) --}}
+            {{#if estado}}
+              <p class="product-card-status {{estado}}">
+                {{estado}}
+              </p>
+            {{/if}}
+
+            <div class="product-card-actions">
+              <button
+                class="btn"
+                {{#if agotado}}disabled{{/if}}>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>
